@@ -1,0 +1,12 @@
+# Datasets
+data/
+*.csv
+*.json
+
+# Python
+__pycache__/
+venv/
+.env
+
+# Vector DB
+chroma_db/
