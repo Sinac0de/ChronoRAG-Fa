@@ -1,0 +1,51 @@
+temporal:
+  timezone: "UTC"
+  top_k: 5
+
+  intent:
+    fresh_keywords:
+      - "آخرین"
+      - "امروز"
+      - "فوری"
+      - "جدید"
+      - "لحظه‌ای"
+      - "up-to-date"
+      - "latest"
+    historical_keywords:
+      - "تاریخچه"
+      - "روند"
+      - "بلندمدت"
+      - "گذشته"
+      - "historical"
+      - "trend"
+
+  lambda_policy:
+    mode: "learned"   # learned | rule_based
+    base_lambda: 0.08
+    model_path: "data/eval/lambda_model.joblib"
+    category_weights:
+      economy: 1.2
+      politics: 1.1
+      sports: 1.0
+      technology: 0.9
+      health: 1.3
+      history: 0.4
+      general: 1.0
+    intent_weights:
+      fresh: 1.3
+      balanced: 1.0
+      historical: 0.6
+
+  alpha_policy:
+    mode: "learned"   # learned | rule_based
+    model_path: "data/eval/alpha_model.joblib"
+    base_alpha:
+      fresh: 0.25
+      balanced: 0.5
+      historical: 0.8
+
+  learning:
+    random_seed: 42
+    synthetic_samples: 2000
+    noise_std_lambda: 0.01
+    noise_std_alpha: 0.02

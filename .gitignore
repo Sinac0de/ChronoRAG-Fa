@@ -1,12 +1,78 @@
-# Datasets
+# -------------------------
+# Project-specific
 data/
+data/**/ # ignore datasets and generated artifacts
 *.csv
 *.json
-
-# Python
-__pycache__/
-venv/
-.env
-
-# Vector DB
 chroma_db/
+data/eval/*.joblib
+*.joblib
+
+# Environment / Python
+venv/
+env/
+.venv/
+pip-wheel-metadata/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+wheelhouse/
+
+# IDEs / editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs / runtime
+*.log
+logs/
+*.pid
+*.sock
+
+# Secrets / env
+.env
+.env.*    # keep .env.example committed, ignore real env files
+
+# Tests / coverage / caches
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# C extensions / compiled files
+*.so
+*.dylib
+*.pyd
+
+# Database / binary stores
+*.db
+*.sqlite3
+
+# Temporary / swap
+*~
+.*.sw?
+*.swo
+*.swp
+
+# Misc
+pytestdebug.log

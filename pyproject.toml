@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "persian-rag-temporal"
+version = "0.1.0"
+description = "Temporal-aware reranking module for Persian RAG"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q --disable-warnings"
+
+[tool.coverage.run]
+source = ["src"]
+branch = true
